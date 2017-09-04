@@ -3,7 +3,7 @@
 		<div class="textfield">
 			<input class="textfield_input" type="text" placeholder="Search Words..." v-model="filterKey">
 		</div>
-		<p class="logo"><a v-link="{ path: '/profile' }"><img src="/images/icon_beta.png" alt=""></a></p>
+		<p class="logo"><a v-link="{ path: '/profile' }"><img src="images/icon_beta.png" alt=""></a></p>
 		<div class="container">
 			<div class="card" v-for="list in filterItems | filterBy filterKey">
 				<a v-show="filterItems.length" v-link="'/work/' + list.id + '/detail'" :class="'card_img'+ list.id + ' card_img'">

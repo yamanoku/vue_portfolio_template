@@ -66,7 +66,7 @@ a:hover {
   height: 100%;
   margin: auto;
   padding: 6vh 5% 0;
-  background: url(/images/iam.jpg) center center;
+  background: url(images/iam.jpg) center center;
   background-size: cover;
   color: #444;
 }
