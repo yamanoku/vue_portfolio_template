@@ -1,7 +1,7 @@
 {
   "name": "vuedev",
   "description": "A Vue.js project",
-  "author": "yamanoku <mailto@oyamaokuto.org>",
+  "author": "yamanoku <0910yama@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --hot",
