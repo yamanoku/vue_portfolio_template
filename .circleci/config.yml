@@ -1,0 +1,16 @@
+version: '2'
+jobs:
+  build:
+    docker:
+      - image: circleci/node:6.8.0
+    working_directory: '~/vue_portfolio_templete'
+    steps:
+      - checkout
+      - restore-cache:
+          key: node_modules-{{ checksum "package.json" }}
+      - run: yarn
+      - save_cache:
+          key: node_modules-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run: yarn run build
