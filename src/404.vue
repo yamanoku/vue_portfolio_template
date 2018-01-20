@@ -1,10 +1,10 @@
 <template>
-	<article transition="fade" v-cloak>
-	<div class="detail-404">
-		<h2 class="detail-404-heading">404</h2>
-		<a class="detail_btn" v-link="{ path: '/home' }">Back Home</a>
-	</div>
-	</article>
+	<transition name="fade" v-cloak>
+		<div class="detail-404">
+			<h2 class="detail-404-heading">404</h2>
+			<router-link class="detail_btn" to="/home">Back Home</router-link>
+		</div>
+	</transition>
 </template>
 
 <style scoped>

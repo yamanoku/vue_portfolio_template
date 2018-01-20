@@ -1,5 +1,5 @@
 <template>
-  <article transition="fade" v-cloak>
+  <transition name="fade" v-cloak>
   	<div class="detail-prof">
       <section>
         <h2>大山奥人 | Okuto Oyama.</h2>
@@ -21,10 +21,10 @@
           <li><a href="http://yamanoku.tumblr.com" target="_blank">Tumblr</a></li>
           <li><a href="https://github.com/yamanoku" target="_blank">Github</a></li>
         </ol>
-        <a class="detail_btn" v-link="{ path: '/home' }">Back Home</a>
+        <router-link class="detail_btn" to="/home">Back Home</router-link>
       </section>
   	</div>
-  </article>
+  </transition>
 </template>
 
 <style scoped>

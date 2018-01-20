@@ -1,39 +1,20 @@
 <template>
-	<section class="main" transition="main" v-cloak>
+	<div class="main">
 		<div class="textfield">
-			<input class="textfield_input" type="text" placeholder="Search Words..." v-model="filterKey">
+			<input class="textfield_input" type="text" placeholder="Search Words..." v-model="FilterKey">
 		</div>
-		<p class="logo"><a v-link="{ path: '/profile' }"><img src="images/icon_beta.png" alt=""></a></p>
-		<div class="container">
-			<div class="card" v-for="list in filterItems | filterBy filterKey">
-				<a v-show="filterItems.length" v-link="'/work/' + list.id + '/detail'" :class="'card_img'+ list.id + ' card_img'">
-					<img :src="list.image" :alt="list.title">
-				</a>
-				<div class="card_detail">
-					<a v-link="'/work/' + list.id + '/detail'" class="filetype">[{{ list.type }}]</a>
-				</div>
-			</div>
-		</div>
-		<h2 class="no-result" v-show="!filterItems.length">
-			<span>No results.</span><br />
-			<span>\(^Д^)/</span>
-		</h2>
-	</section>
+		<p class="logo"><router-link to="/profile"><img src="images/icon_beta.png" alt=""></router-link></p>
+	</div>
 </template>
 
 <script>
-let filterKey
-import imagesData from './data/list.json'
+let FilterKey
+import ImagesData from './data/list.json'
 export default {
 	data() {
 		return {
-			filterKey : '',
-			lists: imagesData,
-		}
-	},
-	computed: {
-		filterItems: function () {
-			return this.$eval('lists | filterBy filterKey')
+			FilterKey : '',
+			lists: ImagesData,
 		}
 	}
 }
@@ -155,10 +136,10 @@ export default {
 	font-weight: 700;
 	width: 100%;
 }
-.main-transition {
+.main-enter-active {
 	transition: transform .65s ease-in-out, height 1ms linear;
 }
-.main-enter, .main-leave {
+.main-enter, .main-leave-active {
 	height: 0;
 	transform: translateY(180px);
 }

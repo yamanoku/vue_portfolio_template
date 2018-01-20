@@ -1,16 +1,16 @@
 <template>
-	<article transition="fade" v-cloak>
+	<transition class="article" name="fade" v-cloak>
 		<template v-for="list in lists">
 			<div class="detail" v-if="$route.path === '/work/' + list.id + '/detail'" :style="{ backgroundImage: 'url('+ list.image +')' }">
 				<h2 class="detail_heading">No.{{list.id}} - {{list.title}}
 					<span class="detail_type">{{list.type}}</span>
 				</h2>
 				<p>{{list.desc}}</p>
-				<a href="{{list.url}}" target="_blank">{{list.url}}</a>
+				<a :href="list.url" target="_blank">{{list.url}}</a>
 			</div>
 		</template>
-		<a class="detail_btn" v-link="{ path: '/home' }">Back Home</a>
-	</article>
+		<router-link class="detail_btn" to="/home">Back Home</router-link>
+	</transition>
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style scoped>
-article {
+.article {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -122,15 +122,15 @@ article {
 }
 </style>
 <style>
-.fade-transition {
+.fade-enter-active {
 	transition: transform .65s ease-in-out, opacity .35s ease-in;
 }
-.fade-enter, .fade-leave {
+.fade-enter, .fade-leave-active {
 	opacity: 0.5;
 	height: 0;
 	transform: translateY(-300px);
 }
-.fade-enter *, .fade-leave * {
+.fade-enter *, .fade-leave-active * {
 	display: none;
 }
 </style>

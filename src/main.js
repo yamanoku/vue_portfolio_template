@@ -7,30 +7,28 @@ import Detail from './Detail.vue'
 import Profile from './Profile.vue'
 import NotFound from './404.vue'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-var router = new VueRouter({
-  hashbang: false
-})
+const router = new VueRouter({
+  routes,
+});
 
-router.map({
-	'/home': {
-		component: Main
-	},
-	'/work/:number/detail': {
-		component: Detail
-	},
-	'/profile': {
-		component: Profile
-	},
-	'*': {
-		component: NotFound
-	}
-})
+const routes = [
+  {
+  	path: '/',
+  	redirect: '/home'
+  },
+  {
+  	path: '/home',
+  	component: Main
+  },
+  {
+  	path: '/profile',
+  	component: Profile
+  }
+]
 
-router.redirect({
-	'/': '/home'
-})
-
-router.start(App, '#app');
-
+const app = new Vue({
+  router,
+  render: h => h(App)
+}).$mount('#app');
