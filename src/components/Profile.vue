@@ -1,32 +1,30 @@
 <template>
-  <transition name="fade">
-    <article>
-      <div class="detail-prof">
-        <section>
-          <h2>大山奥人 | Okuto Oyama.</h2>
-          <ul>
-            <li>性別 : 男 | Sex : Man</li>
-            <li>誕生日 : 10月30日 | Birth : 10/30</li>
-            <li>現住所 : 千葉県鎌ケ谷市 | Location : Kamagaya / Chiba / Japan</li>
-            <li>E-mail : 0910yama@gmail.com</li>
-          </ul>
-          <ol>
-            <li>1989 : 秋田県能代市にて生まれる | Born in Noshiro, Akita</li>
-            <li>2008 : 岩手大学芸術文化課程 入学 | Get into Iwate University of Art and Culture Course</li>
-            <li>2014 : 結婚 | Get married</li>
-            <li>2016 : 娘が生まれる | Born daughter</li>
-          </ol>
-          <div class="sns">
-            <a href="https://twitter.com/yamanoku" target="_blank">Twitter</a>
-            <a href="https://www.facebook.com/yamanoku" target="_blank">Facebook</a>
-            <a href="http://yamanoku.tumblr.com" target="_blank">Tumblr</a>
-            <a href="https://github.com/yamanoku" target="_blank">Github</a>
-          </div>
-        </section>
-        <router-link class="detail_btn" to="/home">Back Home</router-link>
-      </div>
-    </article>
-  </transition>
+  <article>
+    <div class="detail-prof">
+      <section>
+        <h2>大山奥人 | Okuto Oyama.</h2>
+        <ul>
+          <li>性別 : 男 | Sex : Man</li>
+          <li>誕生日 : 10月30日 | Birth : 10/30</li>
+          <li>現住所 : 千葉県鎌ケ谷市 | Location : Kamagaya / Chiba / Japan</li>
+          <li>E-mail : 0910yama@gmail.com</li>
+        </ul>
+        <ol>
+          <li>1989 : 秋田県能代市にて生まれる | Born in Noshiro, Akita</li>
+          <li>2008 : 岩手大学芸術文化課程 入学 | Get into Iwate University of Art and Culture Course</li>
+          <li>2014 : 結婚 | Get married</li>
+          <li>2016 : 娘が生まれる | Born daughter</li>
+        </ol>
+        <div class="sns">
+          <a href="https://twitter.com/yamanoku" target="_blank">Twitter</a>
+          <a href="https://www.facebook.com/yamanoku" target="_blank">Facebook</a>
+          <a href="http://yamanoku.tumblr.com" target="_blank">Tumblr</a>
+          <a href="https://github.com/yamanoku" target="_blank">Github</a>
+        </div>
+      </section>
+      <router-link class="detail_btn" to="/home">Back Home</router-link>
+    </div>
+  </article>
 </template>
 
 <style scoped>

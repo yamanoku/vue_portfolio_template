@@ -21,7 +21,8 @@ export default new Router({
     {
       path: '/work/:number/detail',
       name: 'Works',
-      component: Detail
+      component: Detail,
+      meta: { scrollToTop: true }
     },
     {
       path: '/profile',
@@ -33,5 +34,18 @@ export default new Router({
       name: 'NotFound',
       component: NotFound
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return new Promise(resolve => {
+        if (to.matched.some(m => m.meta.scrollToTop)) {
+          setTimeout(() => {
+            resolve({ x: 0, y: 0 })
+          }, 750)
+        }
+      })
+    }
+  }
 })

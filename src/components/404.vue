@@ -1,12 +1,10 @@
 <template>
-  <transition name="fade">
-    <article>
-      <div class="detail-404">
-        <h2 class="detail-404-heading">404</h2>
-        <router-link class="detail_btn" to="/home">Back Home</router-link>
-      </div>
-    </article>
-  </transition>
+  <article>
+    <div class="detail-404">
+      <h2 class="detail-404-heading">404</h2>
+      <router-link class="detail_btn" to="/home">Back Home</router-link>
+    </div>
+  </article>
 </template>
 
 <style scoped>

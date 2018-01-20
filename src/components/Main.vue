@@ -1,26 +1,24 @@
 <template>
-  <transition name="fade">
-    <section class="main">
-      <div class="textfield">
-        <input class="textfield_input" type="text" placeholder="Search Words..." v-model="filterKey" />
-      </div>
-      <p class="logo"><router-link to="/profile"><img src="../assets/img/icon_beta.png" alt=""></router-link></p>
-      <div class="container">
-        <div class="card" v-for="list in filterItems" :key="list.id">
-          <router-link :to="{ name: 'Works', params: { number: list.id }}" :class="'card_img'+ list.id + ' card_img'">
-            <img :src="list.image" :alt="list.title">
-          </router-link>
-          <div class="card_detail">
-            <router-link :to="{ name: 'Works', params: { number: list.id }}" class="filetype">[{{ list.type }}]</router-link>
-          </div>
+  <section class="main">
+    <div class="textfield">
+      <input class="textfield_input" type="text" placeholder="Search Words..." v-model="filterKey" />
+    </div>
+    <p class="logo"><router-link to="/profile"><img src="../assets/img/icon_beta.png" alt=""></router-link></p>
+    <div class="container">
+      <div class="card" v-for="list in filterItems" :key="list.id">
+        <router-link :to="{ name: 'Works', params: { number: list.id }}" :class="'card_img'+ list.id + ' card_img'">
+          <img :src="list.image" :alt="list.title">
+        </router-link>
+        <div class="card_detail">
+          <router-link :to="{ name: 'Works', params: { number: list.id }}" class="filetype">[{{ list.type }}]</router-link>
         </div>
       </div>
-      <h2 class="no-result" v-show="filterItems.length==0">
-        <span>No results.</span>
-        <span>\(^Д^)/</span>
-      </h2>
-    </section>
-  </transition>
+    </div>
+    <h2 class="no-result" v-show="filterItems.length==0">
+      <span>No results.</span>
+      <span>\(^Д^)/</span>
+    </h2>
+  </section>
 </template>
 
 <script>

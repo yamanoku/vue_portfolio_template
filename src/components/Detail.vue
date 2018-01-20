@@ -1,18 +1,16 @@
 <template>
-  <transition name="fade">
-    <article>
-      <template v-for="list in lists">
-        <div class="detail" v-if="$route.path === '/work/' + list.id + '/detail'" :style="{ backgroundImage: 'url('+ list.image +')' }" :key="list.id">
-          <h2 class="detail_heading">No.{{list.id}} - {{list.title}}
-            <span class="detail_type">{{list.type}}</span>
-          </h2>
-          <p>{{list.desc}}</p>
-          <a :href="list.url" target="_blank">{{list.url}}</a>
-        </div>
-      </template>
-      <router-link class="detail_btn" to="/home">Back Home</router-link>
-    </article>
-  </transition>
+  <article>
+    <template v-for="list in lists">
+      <div class="detail" v-if="$route.path === '/work/' + list.id + '/detail'" :style="{ backgroundImage: 'url('+ list.image +')' }" :key="list.id">
+        <h2 class="detail_heading">No.{{list.id}} - {{list.title}}
+          <span class="detail_type">{{list.type}}</span>
+        </h2>
+        <p>{{list.desc}}</p>
+        <a :href="list.url" target="_blank">{{list.url}}</a>
+      </div>
+    </template>
+    <router-link class="detail_btn" to="/home">Back Home</router-link>
+  </article>
 </template>
 
 <script>
