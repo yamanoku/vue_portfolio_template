@@ -7,21 +7,21 @@
           <ul>
             <li>性別 : 男 | Sex : Man</li>
             <li>誕生日 : 10月30日 | Birth : 10/30</li>
-            <li>現所在地 : 東京都足立区 | Location : Adachi / Tokyo / Japan</li>
+            <li>現住所 : 千葉県鎌ケ谷市 | Location : Kamagaya / Chiba / Japan</li>
             <li>E-mail : 0910yama@gmail.com</li>
           </ul>
-          <ul>
+          <ol>
             <li>1989 : 秋田県能代市にて生まれる | Born in Noshiro, Akita</li>
             <li>2008 : 岩手大学芸術文化課程 入学 | Get into Iwate University of Art and Culture Course</li>
             <li>2014 : 結婚 | Get married</li>
             <li>2016 : 娘が生まれる | Born daughter</li>
-          </ul>
-          <ol>
-            <li><a href="https://twitter.com/yamanoku" target="_blank">Twitter</a></li>
-            <li><a href="https://www.facebook.com/yamanoku" target="_blank">Facebook</a></li>
-            <li><a href="http://yamanoku.tumblr.com" target="_blank">Tumblr</a></li>
-            <li><a href="https://github.com/yamanoku" target="_blank">Github</a></li>
           </ol>
+          <div class="sns">
+            <a href="https://twitter.com/yamanoku" target="_blank">Twitter</a>
+            <a href="https://www.facebook.com/yamanoku" target="_blank">Facebook</a>
+            <a href="http://yamanoku.tumblr.com" target="_blank">Tumblr</a>
+            <a href="https://github.com/yamanoku" target="_blank">Github</a>
+          </div>
         </section>
         <router-link class="detail_btn" to="/home">Back Home</router-link>
       </div>
@@ -46,17 +46,18 @@ section {
 h2 {
   font-size: 2rem;
 }
-p, ul {
+p, ul, ol {
   margin-top: .75em;
   font-size: 1.4rem;
   line-height: 1.8;
 }
-ol {
+.sns {
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
-ol li {
-  display: inline-block;
-  margin-right: 5px;
+.sns a {
+  margin-right: 10px;
 }
 a {
   color: #456a8e;
