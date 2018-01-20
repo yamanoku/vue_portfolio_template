@@ -4,35 +4,34 @@ var webpack = require('webpack')
 module.exports = {
   entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: 'dist/',
+    publicPath: '/',
     filename: 'build.js'
   },
   resolveLoader: {
-    root: path.join(__dirname, 'node_modules'),
+    modules: [path.join(__dirname, 'src'), 'node_modules'],
   },
   module: {
     loaders: [
       {
         test: /\.vue$/,
-        loader: 'vue'
+        loader: 'vue-loader'
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         exclude: /node_modules/
       },
       {
         test: /\.json$/,
-        loader: 'json'
+        loader: 'json-loader'
       },
       {
         test: /\.html$/,
-        loader: 'vue-html'
+        loader: 'vue-html-loader'
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: "file?name=[name].[ext]"
+        loader: "file-loader?name=[name].[ext]"
       }
     ]
   },
@@ -57,6 +56,6 @@ if (process.env.NODE_ENV === 'production') {
         warnings: false
       }
     }),
-    new webpack.optimize.OccurenceOrderPlugin()
+    new webpack.optimize.OccurrenceOrderPlugin()
   ])
 }
