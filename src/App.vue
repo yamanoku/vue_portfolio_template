@@ -75,8 +75,14 @@ body {
 .fade-leave-active {
   transition: all .75s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
-.fade-enter, .fade-leave-to {
-  /*opacity: 0;*/
-  transform: translateY(100vh);
+@media screen and (min-width: 769px) {
+  .fade-enter, .fade-leave-to {
+    transform: translateY(100vh);
+  }
+}
+@media screen and (max-width: 768px) {
+  .fade-enter, .fade-leave-to {
+    transform: translateX(-100vw);
+  }
 }
 </style>
