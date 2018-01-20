@@ -1,30 +1,32 @@
 <template>
-  <article transition="fade" v-cloak>
-  	<div class="detail-prof">
-      <section>
-        <h2>大山奥人 | Okuto Oyama.</h2>
-        <ul>
-          <li>性別 : 男 | Sex : Man</li>
-          <li>誕生日 : 10月30日 | Birth : 10/30</li>
-          <li>現所在地 : 東京都足立区 | Location : Adachi / Tokyo / Japan</li>
-          <li>E-mail : 0910yama@gmail.com</li>
-        </ul>
-        <ul>
-          <li>1989 : 秋田県能代市にて生まれる | Born in Noshiro, Akita</li>
-          <li>2008 : 岩手大学芸術文化課程 入学 | Get into Iwate University of Art and Culture Course</li>
-          <li>2014 : 結婚 | Get married</li>
-          <li>2016 : 娘が生まれる | Born daughter</li>
-        </ul>
-        <ol>
-          <li><a href="https://twitter.com/yamanoku" target="_blank">Twitter</a></li>
-          <li><a href="https://www.facebook.com/yamanoku" target="_blank">Facebook</a></li>
-          <li><a href="http://yamanoku.tumblr.com" target="_blank">Tumblr</a></li>
-          <li><a href="https://github.com/yamanoku" target="_blank">Github</a></li>
-        </ol>
-        <a class="detail_btn" v-link="{ path: '/home' }">Back Home</a>
-      </section>
-  	</div>
-  </article>
+  <transition name="fade">
+    <article>
+      <div class="detail-prof">
+        <section>
+          <h2>大山奥人 | Okuto Oyama.</h2>
+          <ul>
+            <li>性別 : 男 | Sex : Man</li>
+            <li>誕生日 : 10月30日 | Birth : 10/30</li>
+            <li>現所在地 : 東京都足立区 | Location : Adachi / Tokyo / Japan</li>
+            <li>E-mail : 0910yama@gmail.com</li>
+          </ul>
+          <ul>
+            <li>1989 : 秋田県能代市にて生まれる | Born in Noshiro, Akita</li>
+            <li>2008 : 岩手大学芸術文化課程 入学 | Get into Iwate University of Art and Culture Course</li>
+            <li>2014 : 結婚 | Get married</li>
+            <li>2016 : 娘が生まれる | Born daughter</li>
+          </ul>
+          <ol>
+            <li><a href="https://twitter.com/yamanoku" target="_blank">Twitter</a></li>
+            <li><a href="https://www.facebook.com/yamanoku" target="_blank">Facebook</a></li>
+            <li><a href="http://yamanoku.tumblr.com" target="_blank">Tumblr</a></li>
+            <li><a href="https://github.com/yamanoku" target="_blank">Github</a></li>
+          </ol>
+        </section>
+        <router-link class="detail_btn" to="/home">Back Home</router-link>
+      </div>
+    </article>
+  </transition>
 </template>
 
 <style scoped>
@@ -66,7 +68,7 @@ a:hover {
   height: 100%;
   margin: auto;
   padding: 6vh 5% 0;
-  background: url(images/iam.jpg) center center;
+  background: url(../assets/img/iam.jpg) center center;
   background-size: cover;
   color: #444;
 }
