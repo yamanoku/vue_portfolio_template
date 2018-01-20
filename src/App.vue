@@ -84,7 +84,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .fade-enter, .fade-leave-to {
-    transform: translateX(-450vw);
+    transform: translateX(-250vw);
   }
 }
 </style>
