@@ -1,0 +1,21 @@
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+      extensions:
+      - .js
+      - .vue
+  eslint:
+    enabled: false
+    channel: "eslint-2"
+  fixme:
+    enabled: true
+ratings:
+  paths:
+  - "**.js"
+  - "**.vue"
+exclude_paths:
+- node_modules/
+- build/
