@@ -19,6 +19,8 @@ article {
 }
 .detail-404 {
   text-align: center;
+  height: 100%;
+  background-color: #f0f0f0;
 }
 .detail-404-heading {
   font-size: 10rem;

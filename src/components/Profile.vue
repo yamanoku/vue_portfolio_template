@@ -67,7 +67,7 @@ a:hover {
 .detail-prof {
   height: 100%;
   margin: auto;
-  padding: 6vh 5% 0;
+  padding: 80px 2.5% 0;
   background: url(../assets/img/iam.jpg) center center;
   background-size: cover;
   color: #444;
@@ -75,7 +75,7 @@ a:hover {
 .detail_btn {
   position: absolute;
   top: 10px;
-  right: 20px;
+  right: 2.5%;
   font-size: 0;
   display: block;
   width: 40px;

@@ -38,7 +38,7 @@ article {
 .detail {
   height: 100%;
   margin: auto;
-  padding: 30px 5% 0;
+  padding: 80px 2.5% 0;
   background-size: cover;
   background-position: center center;
 }
@@ -50,7 +50,6 @@ article {
   color: #333;
   font-size: 2rem;
   font-weight: 700;
-  margin-top: 50px;
   padding: .5em .75em;
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
@@ -82,7 +81,7 @@ article {
 .detail_btn {
   position: absolute;
   top: 20px;
-  right: 20px;
+  right: 2.5%;
   font-size: 0;
   display: block;
   width: 40px;

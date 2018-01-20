@@ -16,7 +16,7 @@
         </div>
       </div>
       <h2 class="no-result" v-show="filterItems.length==0">
-        <span>No results.</span><br />
+        <span>No results.</span>
         <span>\(^Д^)/</span>
       </h2>
     </section>
@@ -79,27 +79,15 @@ export default {
   background-color: #f0f0f0;
 }
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
   width: 95%;
   margin: auto;
-}
-.container::before {
-  display: block;
-  content: "";
-  order: 1;
-  width: 22.75%;
-}
-.container::after {
-  display: block;
-  content: "";
-  width: 22.75%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding-bottom: 20px;
 }
 .card {
-  width: 22.75%;
-  margin-bottom: 2.5%;
   background: #456a8e;
   border-radius: 3px;
   transition: all .25s ease-in-out;
@@ -150,7 +138,7 @@ export default {
   border: 0;
   margin: 0;
   padding: 6px 0;
-  font-size: 14px;
+  font-size: 16px;
   border-bottom: 1px solid #ddd;
 }
 .textfield_input:focus {
@@ -163,14 +151,17 @@ export default {
   font-weight: 700;
   width: 100%;
 }
+.no-result span {
+  display: block;
+}
 @media screen and (max-width: 768px) {
-  .card {
-    width: 48.5%;
+  .container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (max-width: 480px) {
-  .card {
-    width: 100%;
+  .container {
+    grid-template-columns: 1fr;
   }
 }
 </style>
