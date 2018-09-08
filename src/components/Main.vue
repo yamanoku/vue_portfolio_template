@@ -45,7 +45,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .logo {
   position: absolute;
   top: 2.5%;
@@ -54,16 +54,17 @@ export default {
   z-index: 10;
   width: 50px;
   height: 50px;
-}
-.logo img {
-  width: 100%;
-  height: auto;
-}
-.logo a {
-  transition: opacity .25s ease-in;
-}
-.logo a:hover img {
-  opacity: .75;
+  margin: 0;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  a {
+    transition: opacity .25s ease-in;
+    &:hover img {
+      opacity: .75;
+    }
+  }
 }
 .about:hover {
   text-decoration: none;
@@ -84,31 +85,37 @@ export default {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   padding-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 }
 .card {
   background: #456a8e;
   border-radius: 3px;
   transition: all .25s ease-in-out;
-}
-.card:hover {
-  background: #384f66;
-}
-.card_img {
-  display: block;
-  transition: all .25s ease-in;
-  opacity: 1;
-}
-.card_img:hover {
-  opacity: .75;
-}
-.card_img img {
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
-.card_detail {
-  padding: 6px 10px;
+  &:hover {
+    background: #384f66;
+  }
+  &_img {
+    display: block;
+    transition: all .25s ease-in;
+    opacity: 1;
+    &:hover {
+      opacity: .75;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+  }
+  &_detail {
+    padding: 6px 10px;
+  }
 }
 .filetype {
   color: #f0f0f0;
@@ -128,19 +135,19 @@ export default {
   max-width: 320px;
   display: flex;
   padding-top: 30px;
-}
-.textfield_input {
-  appearance: none;
-  background: transparent;
-  width: 100%;
-  border: 0;
-  margin: 0;
-  padding: 6px 0;
-  font-size: 16px;
-  border-bottom: 1px solid #ddd;
-}
-.textfield_input:focus {
-  outline: 0;
+  &_input {
+    appearance: none;
+    background: transparent;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 6px 0;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+  }
+  &_input:focus {
+    outline: 0;
+  }
 }
 .no-result {
   text-align: center;
@@ -148,18 +155,8 @@ export default {
   letter-spacing: .075em;
   font-weight: 700;
   width: 100%;
-}
-.no-result span {
-  display: block;
-}
-@media screen and (max-width: 768px) {
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 480px) {
-  .container {
-    grid-template-columns: 1fr;
+  span {
+    display: block;
   }
 }
 </style>

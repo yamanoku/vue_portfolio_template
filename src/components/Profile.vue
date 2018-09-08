@@ -34,8 +34,10 @@ article {
   left: 0;
   width: 100%;
   height: 100%;
+  display: block;
 }
 section {
+  display: block;
   background: rgba(255,255,255,.95);
   padding: 1em;
   border-radius: 3px;
@@ -43,11 +45,17 @@ section {
 }
 h2 {
   font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
 }
 p, ul, ol {
-  margin-top: .75em;
+  margin: .75em 0 0;
+  padding: 0;
   font-size: 1.4rem;
   line-height: 1.8;
+}
+ul, ol {
+  list-style-type: none;
 }
 .sns {
   margin-top: 20px;
