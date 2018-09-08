@@ -1,5 +1,12 @@
 {
   "extends": [
     "config:base"
-  ]
+  ],
+  "automerge": true,
+  "labels": [
+    "update-dependencies"
+  ],
+  "lockFileMaintenance": {
+    "enabled": false
+  }
 }
