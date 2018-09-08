@@ -70,6 +70,10 @@
     "webpack-dev-server": "2.11.0",
     "webpack-merge": "4.1.4"
   },
+  "engines": {
+    "node": "8.10.0",
+    "npm": "6.4.1"
+  },
   "browserslist": [
     "> 1%"
   ]
