@@ -53,7 +53,7 @@
     "portfinder": "1.0.17",
     "postcss-import": "11.0.0",
     "postcss-loader": "2.0.10",
-    "postcss-url": "7.3.0",
+    "postcss-url": "7.3.2",
     "rimraf": "2.6.2",
     "semver": "5.5.0",
     "shelljs": "0.7.8",
