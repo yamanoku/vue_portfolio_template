@@ -7,6 +7,6 @@
     "update-dependencies"
   ],
   "lockFileMaintenance": {
-    "enabled": false
+    "enabled": true
   }
 }
