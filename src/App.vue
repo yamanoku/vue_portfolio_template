@@ -33,20 +33,26 @@ body {
 }
 .fade {
   &-enter-active {
-    transition: all .75s ease;
+    transition: transform .875s ease-out;
   }
   &-leave-active {
-    transition: all .75s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    transition: transform .875s cubic-bezier(1.0, 0.5, 0.8, 1.0);
   }
 }
 @media screen and (min-width: 769px) {
   .fade-enter, .fade-leave-to {
     transform: translateY(100vh);
+    &.main {
+      transform: translateY(-100vh);
+    }
   }
 }
 @media screen and (max-width: 768px) {
   .fade-enter, .fade-leave-to {
-    transform: translateX(-250vw);
+    transform: translateX(-200vw);
+    &.main {
+      transform: translateX(250vw);
+    }
   }
 }
 </style>

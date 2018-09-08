@@ -5,7 +5,9 @@
         <h2 class="detail_heading">No.{{list.id}} - {{list.title}}
           <span class="detail_type">{{list.type}}</span>
         </h2>
-        <p>{{list.desc}}</p>
+        <div class="detail_description">
+          <p v-for="text in textCompile(list.desc)" :key="text.index">{{text}}</p>
+        </div>
         <a :href="list.url" target="_blank">{{list.url}}</a>
       </div>
     </template>
@@ -20,13 +22,18 @@ export default {
     return {
       lists: jsonData
     }
+  },
+  methods: {
+    textCompile (text) {
+      return text.split(/\n/g)
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 article {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -37,9 +44,11 @@ article {
 .detail {
   height: 100%;
   margin: auto;
-  padding: 80px 2.5% 0;
+  padding: 80px 2.5% 2.5%;
   background-size: cover;
   background-position: center center;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   & + a {
     text-align: center;
   }
@@ -49,29 +58,36 @@ article {
     font-size: 2rem;
     font-weight: 700;
     padding: .5em .75em;
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    border-bottom: 1px solid #f0f0f0;
-    box-shadow: 0 1px 1px rgba(0,0,0,.35);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom: 1px solid #dadada;
     margin: 0;
   }
-  &_heading + p,
-  &_heading + p + a {
+  &_description,
+  &_description + a {
     display: block;
     background: #fff;
     color: #666;
     line-height: 1.6;
     padding: .5em .75em;
-    box-shadow: 0 1px 1px rgba(0,0,0,.35);
   }
-  &_heading + p {
-    border-bottom: 1px solid #f0f0f0;
-    font-size: 1.4rem;
-    margin: 0;
+  &_description {
+    border-bottom: 1px solid #dadada;
+    overflow-y: scroll;
+    display: grid;
+    grid-row-gap: 10px;
+    p {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+    & + a {
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
   }
   &_type {
     font-size: 1.2rem;
-    color: #b0b0b0;
+    color: #333;
     background: #efefef;
     padding: 2px 5px;
     line-height: 1.8;

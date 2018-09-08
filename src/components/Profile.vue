@@ -38,10 +38,12 @@ article {
 }
 section {
   display: block;
-  background: rgba(255,255,255,.95);
+  background: rgba(255,255,255,.9);
   padding: 1em;
   border-radius: 3px;
   position: relative;
+  overflow-y: scroll;
+  height: 100%;
 }
 h2 {
   font-size: 2rem;
@@ -74,7 +76,7 @@ a:hover {
 .detail-prof {
   height: 100%;
   margin: auto;
-  padding: 80px 2.5% 0;
+  padding: 80px 2.5% 2.5%;
   background: url(../assets/img/iam.jpg) center center;
   background-size: cover;
   color: #444;

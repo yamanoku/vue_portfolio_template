@@ -1,9 +1,16 @@
 <template>
   <section class="main">
     <div class="textfield">
-      <input class="textfield_input" type="text" placeholder="Search Words..." v-model="filterKey" />
+      <label class="textfield_label" for="search">
+        <p class="hidden-text" id="search_text">Input form to search for project</p>
+        <input id="search" aria-describedby="search_text" class="textfield_input" type="text" placeholder="Search Words..." v-model="filterKey" />
+      </label>
     </div>
-    <p class="logo"><router-link to="/profile"><img src="../assets/img/icon_beta.png" alt=""></router-link></p>
+    <p class="logo">
+      <router-link to="/profile" class="logo-link">
+        <img src="../assets/img/icon_beta.png" alt="profile Detail">
+      </router-link>
+    </p>
     <div class="container">
       <div class="card" v-for="list in filterItems" :key="list.id">
         <router-link :to="{ name: 'Works', params: { number: list.id }}" :class="'card_img'+ list.id + ' card_img'">
@@ -91,6 +98,9 @@ export default {
   @media screen and (max-width: 480px) {
     grid-template-columns: 1fr;
   }
+  &:empty {
+    padding: 0;
+  }
 }
 .card {
   background: #456a8e;
@@ -135,6 +145,9 @@ export default {
   max-width: 320px;
   display: flex;
   padding-top: 30px;
+  &_label {
+    width: 100%;
+  }
   &_input {
     appearance: none;
     background: transparent;
@@ -151,12 +164,25 @@ export default {
 }
 .no-result {
   text-align: center;
-  font-size: 36px;
+  font-size: 10.5vw;
   letter-spacing: .075em;
   font-weight: 700;
   width: 100%;
+  height: calc(100% - 60px);
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   span {
     display: block;
   }
+}
+.hidden-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 </style>

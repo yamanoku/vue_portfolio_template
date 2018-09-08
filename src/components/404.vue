@@ -17,17 +17,24 @@ article {
 }
 .detail {
   &-404 {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     height: 100%;
+    text-align: center;
     background-color: #f0f0f0;
     &-heading {
       font-size: 10rem;
       letter-spacing: .15em;
+      margin: 0;
     }
   }
   &_btn {
     display: inline-block;
     width: 130px;
+    margin-top: 50px;
     background: #384f66;
     color: #fff;
     font-size: 1.4rem;
