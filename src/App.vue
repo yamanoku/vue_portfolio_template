@@ -19,7 +19,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: 'Noto Sans', HiraKakuProN-W3, Meiryo, sans-serif;
+  font-family: 'Noto Sans JP', HiraKakuProN-W3, Meiryo, sans-serif;
   font-size: 1.6rem;
   height: 100%;
   position: relative;
