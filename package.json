@@ -16,7 +16,7 @@
     }
   },
   "dependencies": {
-    "vue": "2.6.2",
+    "vue": "2.6.3",
     "vue-router": "3.0.2"
   },
   "devDependencies": {
@@ -66,7 +66,7 @@
     "url-loader": "1.1.2",
     "vue-loader": "15.6.2",
     "vue-style-loader": "4.1.2",
-    "vue-template-compiler": "2.6.2",
+    "vue-template-compiler": "2.6.3",
     "webpack": "4.29.2",
     "webpack-bundle-analyzer": "3.0.3",
     "webpack-cli": "3.2.3",
