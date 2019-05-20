@@ -2849,7 +2849,7 @@ eslint-plugin-import@2.17.2:
     read-pkg-up "^2.0.0"
     resolve "^1.10.0"
 
-eslint-plugin-jsx-a11y@^6.0.2:
+eslint-plugin-jsx-a11y@^6.2.1:
   version "6.2.1"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jsx-a11y/-/eslint-plugin-jsx-a11y-6.2.1.tgz#4ebba9f339b600ff415ae4166e3e2e008831cf0c"
   integrity sha512-cjN2ObWrRz0TTw7vEcGQrx+YltMvZoOEx4hWU8eEERDnBIU00OTq7Vr+jA7DFKxiwLNv4tTh5Pq2GUNEa8b6+w==
@@ -2885,18 +2885,18 @@ eslint-plugin-standard@4.0.0:
   resolved "https://registry.yarnpkg.com/eslint-plugin-standard/-/eslint-plugin-standard-4.0.0.tgz#f845b45109c99cd90e77796940a344546c8f6b5c"
   integrity sha512-OwxJkR6TQiYMmt1EsNRMe5qG3GsbjlcOhbGUBY4LtavF9DsLaTcoR+j2Tdjqi23oUwKNUqX7qcn5fPStafMdlA==
 
-eslint-plugin-vue-a11y@0.0.28:
-  version "0.0.28"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue-a11y/-/eslint-plugin-vue-a11y-0.0.28.tgz#9237bb4d9b0b96d0bd80bc33aef401b0b1cafc66"
-  integrity sha512-nbmxntyLIZgRGzqXwYIqQp6ITJUACFsuQOeXBt9tKUjYblKxgqMT7Y0P4nTxubd2Kba1G+XYLDwMio2vfGy5DQ==
+eslint-plugin-vue-a11y@0.0.30:
+  version "0.0.30"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue-a11y/-/eslint-plugin-vue-a11y-0.0.30.tgz#03c2a435990231485b26786b3ea5533bc986d7f1"
+  integrity sha512-1X0n0qzbrwpjxElcsVIMhxtYXB+9hpHOttxMvUJuViv/G4m0cmpHxXFegQh1rmXbOMLQ+MVam/qWykPaXCEbig==
   dependencies:
     aria-query "^0.7.1"
     chai "^4.1.0"
     emoji-regex "^7.0.0"
-    eslint-plugin-jsx-a11y "^6.0.2"
+    eslint-plugin-jsx-a11y "^6.2.1"
     eslint-plugin-vue "^4.4.0"
     jsx-ast-utils "^2.0.1"
-    vue-eslint-parser "^2.0.3"
+    vue-eslint-parser "^6.0.4"
 
 eslint-plugin-vue@5.2.2:
   version "5.2.2"
@@ -3005,7 +3005,7 @@ espree@^4.1.0:
     acorn-jsx "^5.0.0"
     eslint-visitor-keys "^1.0.0"
 
-espree@^5.0.1:
+espree@^5.0.0, espree@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/espree/-/espree-5.0.1.tgz#5d6526fa4fc7f0788a5cf75b15f30323e2f81f7a"
   integrity sha512-qWAZcWh4XE/RwzLJejfcofscgMc9CamR6Tn1+XRXNzrvUSSbiAjGOI/fggztjIi7y9VLPqnICMIPiGyr8JaZ0A==
@@ -7885,6 +7885,18 @@ vue-eslint-parser@^5.0.0:
     eslint-scope "^4.0.0"
     eslint-visitor-keys "^1.0.0"
     espree "^4.1.0"
+    esquery "^1.0.1"
+    lodash "^4.17.11"
+
+vue-eslint-parser@^6.0.4:
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-6.0.4.tgz#56ff47e2c2644bff39951d5a284982c7ecd6f7fa"
+  integrity sha512-GYsDsDWwKaGtnkW4nGUxr01wqIO2FB9/QHQTW1Gl5SUr5OyQvpnR90/D+Gq2cIxURX7aJ7+VyD+37Yx9eFwTgw==
+  dependencies:
+    debug "^4.1.1"
+    eslint-scope "^4.0.0"
+    eslint-visitor-keys "^1.0.0"
+    espree "^5.0.0"
     esquery "^1.0.1"
     lodash "^4.17.11"
 
