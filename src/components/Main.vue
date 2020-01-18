@@ -8,7 +8,7 @@
     </div>
     <p class="logo">
       <router-link to="/profile" class="logo-link">
-        <img src="../assets/img/icon_beta.png" alt="profile Detail">
+        <img :src="icon" alt="profile Detail">
       </router-link>
     </p>
     <div class="container">
@@ -30,11 +30,13 @@
 
 <script>
 import imagesData from '@/assets/data/list.json'
+import icon from '@/assets/img/icon_beta.png'
 export default {
   data () {
     return {
       filterKey: '',
-      lists: imagesData
+      lists: imagesData,
+      icon
     }
   },
   computed: {
