@@ -22,7 +22,7 @@
           <a href="https://github.com/yamanoku" target="_blank">Github</a>
         </div>
       </section>
-      <router-link class="detail_btn" to="/home">Back Home</router-link>
+      <router-link class="detail_btn" to="/">Back Home</router-link>
     </div>
   </article>
 </template>
