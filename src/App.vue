@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
+  <router-view v-slot="{ Component }">
     <transition name="fade">
-      <router-view />
+      <component :is="Component" />
     </transition>
-  </div>
+  </router-view>
 </template>
 
 <script>
@@ -40,7 +40,7 @@ body {
   }
 }
 @media screen and (min-width: 769px) {
-  .fade-enter, .fade-leave-to {
+  .fade-enter-from, .fade-leave-to {
     transform: translateY(100vh);
     &.main {
       transform: translateY(-100vh);
@@ -48,7 +48,7 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  .fade-enter, .fade-leave-to {
+  .fade-enter-from, .fade-leave-to {
     transform: translateX(-200vw);
     &.main {
       transform: translateX(250vw);

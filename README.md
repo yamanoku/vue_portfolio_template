@@ -17,13 +17,13 @@
 
 ``` bash
 # install dependencies
-yarn
+npm ci
 
 # serve with hot reload at localhost:8080
-yarn dev
+npm run serve
 
 # build for production with minification
-yarn build
+npm run build
 ```
 ## Licence
 
