@@ -18,19 +18,14 @@ jobs:
 
     steps:
       - checkout
-
-      # Download and cache dependencies
       - restore_cache:
-          name: Restore Yarn Package Cache
           keys:
-          - yarn-packages-{{ checksum "yarn.lock" }}
+            - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
           name: Install Dependencies
-          command: yarn install
+          command: npm ci
       - save_cache:
-          name: Save Yarn Package Cache
-          key: yarn-packages-{{ checksum "yarn.lock" }}
           paths:
-            - ~/.cache/yarn
-      # run tests!
-      - run: yarn build
+            - ~/usr/local/lib/node_modules
+          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run: npm run build
