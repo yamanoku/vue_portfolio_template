@@ -25,7 +25,7 @@
     "eslint-plugin-vue": "7.1.0",
     "normalize.css": "8.0.1",
     "sass": "1.29.0",
-    "sass-loader": "10.0.5"
+    "sass-loader": "10.1.0"
   },
   "eslintConfig": {
     "root": true,
