@@ -1,8 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Main from "@/components/Main";
-import Detail from "@/components/Detail";
-import Profile from "@/components/Profile";
-import NotFound from "@/components/404";
+import Main from "@/components/Main.vue";
+import Detail from "@/components/Detail.vue";
+import Profile from "@/components/Profile.vue";
+import NotFound from "@/components/404.vue";
 
 const routes = [
   {
@@ -41,7 +41,7 @@ const router = createRouter({
       return new Promise(resolve => {
         if (to.matched.some(m => m.meta.scrollToTop)) {
           setTimeout(() => {
-            resolve({ x: 0, y: 0 })
+            resolve({ top: 0, left: 0 })
           }, 750)
         }
       })

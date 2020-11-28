@@ -23,20 +23,31 @@
   </article>
 </template>
 
-<script>
-import jsonData from "@/assets/data/list.json";
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+import listData from "@/assets/data/list.json";
+
+const data: Array<{
+  id: string;
+  title: string;
+  type: string;
+  url: string;
+  image: string;
+  desc: string;
+}> = listData;
+
+export default defineComponent({
   data() {
     return {
-      lists: jsonData
+      lists: data
     };
   },
   methods: {
-    textCompile(text) {
+    textCompile(text: string): string[] {
       return text.split(/\n/g);
     }
   }
-};
+});
 </script>
 
 <style lang="scss" scoped>

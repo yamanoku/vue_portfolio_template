@@ -2,56 +2,81 @@
   <section class="main">
     <div class="textfield">
       <label class="textfield_label" for="search">
-        <p class="hidden-text" id="search_text">Input form to search for project</p>
-        <input id="search" aria-describedby="search_text" class="textfield_input" type="text" placeholder="Search Words..." v-model="filterKey" />
+        <p class="hidden-text" id="search_text">
+          Input form to search for project
+        </p>
+        <input
+          id="search"
+          aria-describedby="search_text"
+          class="textfield_input"
+          type="text"
+          placeholder="Search Words..."
+          v-model="filterKey"
+        />
       </label>
     </div>
     <p class="logo">
       <router-link to="/profile" class="logo-link">
-        <img :src="icon" alt="profile Detail">
+        <img src="/icon_beta.png" alt="profile Detail" />
       </router-link>
     </p>
     <div class="container">
       <div class="card" v-for="list in filterItems" :key="list.id">
-        <router-link :to="{ name: 'Works', params: { number: list.id }}" :class="'card_img'+ list.id + ' card_img'">
-          <img :src="list.image" :alt="list.title">
+        <router-link
+          :to="{ name: 'Works', params: { number: list.id } }"
+          :class="'card_img' + list.id + ' card_img'"
+        >
+          <img :src="list.image" :alt="list.title" />
         </router-link>
         <div class="card_detail">
-          <router-link :to="{ name: 'Works', params: { number: list.id }}" class="filetype">[{{ list.type }}]</router-link>
+          <router-link
+            :to="{ name: 'Works', params: { number: list.id } }"
+            class="filetype"
+            >[{{ list.type }}]</router-link
+          >
         </div>
       </div>
     </div>
-    <h2 class="no-result" v-show="filterItems.length==0">
+    <h2 class="no-result" v-show="filterItems.length == 0">
       <span>No results.</span>
       <span>\(^Д^)/</span>
     </h2>
   </section>
 </template>
 
-<script>
-import imagesData from '@/assets/data/list.json'
-import icon from '@/assets/img/icon_beta.png'
-export default {
-  data () {
+<script lang="ts">
+import { defineComponent } from "vue";
+import listData from "@/assets/data/list.json";
+
+const data: Array<{
+  id: string;
+  title: string;
+  type: string;
+  url: string;
+  image: string;
+  desc: string;
+}> = listData;
+
+export default defineComponent({
+  data() {
     return {
-      filterKey: '',
-      lists: imagesData,
-      icon
-    }
+      filterKey: "",
+      lists: data
+    };
   },
   computed: {
-    filterItems: function () {
-      return this.lists.filter((list) => {
-        const searchRegex = new RegExp(this.filterKey, 'i')
+    filterItems: function(): any {
+      return this.lists.filter(list => {
+        const searchRegex = new RegExp(this.filterKey, "i");
         return (
           searchRegex.test(list.title) ||
           searchRegex.test(list.type) ||
           searchRegex.test(list.desc)
-        )
-      })
+        );
+      });
     }
   }
-}
+});
 </script>
 
 <style lang="scss" scoped>
@@ -69,9 +94,9 @@ export default {
     height: auto;
   }
   a {
-    transition: opacity .25s ease-in;
+    transition: opacity 0.25s ease-in;
     &:hover img {
-      opacity: .75;
+      opacity: 0.75;
     }
   }
 }
@@ -107,16 +132,16 @@ export default {
 .card {
   background: #456a8e;
   border-radius: 3px;
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   &:hover {
     background: #384f66;
   }
   &_img {
     display: block;
-    transition: all .25s ease-in;
+    transition: all 0.25s ease-in;
     opacity: 1;
     &:hover {
-      opacity: .75;
+      opacity: 0.75;
     }
     img {
       width: 100%;
@@ -167,7 +192,7 @@ export default {
 .no-result {
   text-align: center;
   font-size: 10.5vw;
-  letter-spacing: .075em;
+  letter-spacing: 0.075em;
   font-weight: 700;
   width: 100%;
   height: calc(100% - 60px);
