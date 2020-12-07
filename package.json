@@ -13,7 +13,7 @@
     "core-js": "3.8.1",
     "register-service-worker": "1.7.1",
     "vue": "3.0.4",
-    "vue-router": "4.0.0-rc.6"
+    "vue-router": "4.0.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "4.9.0",
