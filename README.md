@@ -1,7 +1,7 @@
 # Vue.js Portfolio Templete
 
 [![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/yamanoku/vue_portfolio_templete/)
-[![CircleCI](https://circleci.com/gh/yamanoku/vue_portfolio_template/tree/master.svg?style=svg)](https://circleci.com/gh/yamanoku/vue_portfolio_template/tree/master)
+[![CircleCI](https://circleci.com/gh/yamanoku/vue_portfolio_template/tree/main.svg?style=svg)](https://circleci.com/gh/yamanoku/vue_portfolio_template/tree/main)
 [![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 [![Vue](https://img.shields.io/npm/v/vue/next.svg)](https://www.npmjs.com/package/vue/v/next)
 
