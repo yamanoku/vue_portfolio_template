@@ -28,7 +28,7 @@
     "@vue/eslint-config-typescript": "9.0.0",
     "babel-eslint": "10.1.0",
     "eslint": "6.8.0",
-    "eslint-plugin-vue": "7.20.0",
+    "eslint-plugin-vue": "8.0.3",
     "normalize.css": "8.0.1",
     "sass": "1.43.4",
     "sass-loader": "10.2.0",
@@ -47,7 +47,9 @@
     "parserOptions": {
       "parser": "@typescript-eslint/parser"
     },
-    "rules": {}
+    "rules": {
+      "vue/multi-word-component-names": "off"
+    }
   },
   "browserslist": [
     "> 1%",
