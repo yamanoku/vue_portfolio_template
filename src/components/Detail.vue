@@ -37,15 +37,12 @@ const data: Array<{
 }> = listData;
 
 export default defineComponent({
-  data() {
-    return {
-      lists: data
-    };
-  },
-  methods: {
-    textCompile(text: string): string[] {
+  setup() {
+    const lists = data;
+    const textCompile = (text: string): string[] => {
       return text.split(/\n/g);
     }
+    return { lists, textCompile };
   }
 });
 </script>

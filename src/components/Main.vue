@@ -45,7 +45,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref, computed } from "vue";
 import listData from "@/assets/data/list.json";
 
 const data: Array<{
@@ -58,23 +58,18 @@ const data: Array<{
 }> = listData;
 
 export default defineComponent({
-  data() {
-    return {
-      filterKey: "",
-      lists: data
-    };
-  },
-  computed: {
-    filterItems: function(): any {
-      return this.lists.filter(list => {
-        const searchRegex = new RegExp(this.filterKey, "i");
-        return (
-          searchRegex.test(list.title) ||
-          searchRegex.test(list.type) ||
-          searchRegex.test(list.desc)
-        );
-      });
-    }
+  setup() {
+    const filterKey = ref("");
+    const lists = data;
+    const filterItems = computed(() => lists.filter(list => {
+      const searchRegex = new RegExp(filterKey.value, "i");
+      return (
+        searchRegex.test(list.title) ||
+        searchRegex.test(list.type) ||
+        searchRegex.test(list.desc)
+      );
+    }));
+    return { filterKey, filterItems, lists };
   }
 });
 </script>
