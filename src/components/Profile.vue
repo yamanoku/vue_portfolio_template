@@ -6,7 +6,7 @@
         <ul>
           <li>性別 : 男 | Sex : Man</li>
           <li>誕生日 : 10月30日 | Birth : 10/30</li>
-          <li>現住所 : 千葉県鎌ケ谷市 | Location : Kamagaya / Chiba / Japan</li>
+          <li>現住所 : 千葉県流山市 | Location : Nagareyama / Chiba / Japan</li>
           <li>E-mail : 0910yama@gmail.com</li>
         </ul>
         <ol>
