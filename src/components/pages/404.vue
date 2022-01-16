@@ -1,24 +1,20 @@
 <template>
-  <article>
+  <cover>
     <imposter>
       <div class="detail-404">
         <h2 class="detail-404-heading">404</h2>
         <router-link class="detail_btn" to="/">Back Home</router-link>
       </div>
     </imposter>
-  </article>
+  </cover>
 </template>
 
 <script setup lang="ts">
+import Cover from "@/components/layouts/Cover.vue";
 import Imposter from "@/components/layouts/Imposter.vue";
 </script>
 
 <style scoped>
-article {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 .detail-404 {
   display: flex;
   flex-direction: column;
