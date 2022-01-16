@@ -74,7 +74,7 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .logo {
   position: absolute;
   top: 2.5%;
@@ -84,16 +84,16 @@ export default defineComponent({
   width: 50px;
   height: 50px;
   margin: 0;
-  img {
-    width: 100%;
-    height: auto;
-  }
-  a {
-    transition: opacity 0.25s ease-in;
-    &:hover img {
-      opacity: 0.75;
-    }
-  }
+}
+.logo img {
+  width: 100%;
+  height: auto;
+}
+.logo a {
+  transition: opacity 0.25s ease-in;
+}
+.logo a:hover img {
+  opacity: 0.75;
 }
 .about:hover {
   text-decoration: none;
@@ -114,40 +114,45 @@ export default defineComponent({
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   padding-bottom: 20px;
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .container {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media screen and (max-width: 480px) {
+}
+@media screen and (max-width: 480px) {
+  .container {
     grid-template-columns: 1fr;
   }
-  &:empty {
-    padding: 0;
-  }
+}
+.container:empty {
+  padding: 0;
 }
 .card {
   background: #456a8e;
   border-radius: 3px;
   transition: all 0.25s ease-in-out;
-  &:hover {
-    background: #384f66;
-  }
-  &_img {
-    display: block;
-    transition: all 0.25s ease-in;
-    opacity: 1;
-    &:hover {
-      opacity: 0.75;
-    }
-    img {
-      width: 100%;
-      height: auto;
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
-    }
-  }
-  &_detail {
-    padding: 6px 10px;
-  }
+}
+
+.card:hover {
+  background: #384f66;
+}
+.card_img {
+  display: block;
+  transition: all 0.25s ease-in;
+  opacity: 1;
+}
+.card_img:hover {
+  opacity: 0.75;
+}
+.card_img img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.card_detail {
+  padding: 6px 10px;
 }
 .filetype {
   color: #f0f0f0;
@@ -167,22 +172,22 @@ export default defineComponent({
   max-width: 320px;
   display: flex;
   padding-top: 30px;
-  &_label {
-    width: 100%;
-  }
-  &_input {
-    appearance: none;
-    background: transparent;
-    width: 100%;
-    border: 0;
-    margin: 0;
-    padding: 6px 0;
-    font-size: 16px;
-    border-bottom: 1px solid #ddd;
-  }
-  &_input:focus {
-    outline: 0;
-  }
+}
+.textfield_label {
+  width: 100%;
+}
+.textfield_input {
+  appearance: none;
+  background: transparent;
+  width: 100%;
+  border: 0;
+  margin: 0;
+  padding: 6px 0;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+}
+.textfield_input:focus {
+  outline: 0;
 }
 .no-result {
   text-align: center;
@@ -196,9 +201,9 @@ export default defineComponent({
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  span {
-    display: block;
-  }
+}
+.no-result span {
+  display: block;
 }
 .hidden-text {
   position: absolute;

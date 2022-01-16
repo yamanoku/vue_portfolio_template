@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style>
 html {
   height: 100%;
   font-size: 62.5%;
@@ -31,28 +31,26 @@ body {
 *,*:before,*:after {
   box-sizing: border-box;
 }
-.fade {
-  &-enter-active {
-    transition: transform .875s ease-out;
-  }
-  &-leave-active {
-    transition: transform .875s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-  }
+.fade-enter-active {
+  transition: transform .875s ease-out;
+}
+.fade-leave-active {
+  transition: transform .875s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 @media screen and (min-width: 769px) {
   .fade-enter-from, .fade-leave-to {
     transform: translateY(100vh);
-    &.main {
-      transform: translateY(-100vh);
-    }
+  }
+  .fade-enter-from.main, .fade-leave-to.main {
+    transform: translateY(-100vh);
   }
 }
 @media screen and (max-width: 768px) {
   .fade-enter-from, .fade-leave-to {
     transform: translateX(-200vw);
-    &.main {
-      transform: translateX(250vw);
-    }
+  }
+  .fade-enter-from.main, .fade-leave-to.main {
+    transform: translateX(250vw);
   }
 }
 </style>
