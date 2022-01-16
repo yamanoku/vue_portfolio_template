@@ -1,51 +1,57 @@
 <template>
-  <section class="main">
-    <div class="textfield">
-      <label class="textfield_label" for="search">
-        <p class="hidden-text" id="search_text">
-          Input form to search for project
-        </p>
-        <input
-          id="search"
-          aria-describedby="search_text"
-          class="textfield_input"
-          type="text"
-          placeholder="Search Words..."
-          v-model="filterKey"
-        />
-      </label>
-    </div>
+  <main class="main">
+    <cover>
+      <div class="textfield">
+        <label class="textfield_label" for="search">
+          <p class="hidden-text" id="search_text">
+            Input form to search for project
+          </p>
+          <input
+            id="search"
+            aria-describedby="search_text"
+            class="textfield_input"
+            type="text"
+            placeholder="Search Words..."
+            v-model="filterKey"
+          />
+        </label>
+      </div>
+      <div class="container" v-show="filterItems.length !== 0">
+        <grid>
+          <div class="card" v-for="list in filterItems" :key="list.id">
+            <router-link
+              :to="{ name: 'Works', params: { number: list.id } }"
+              :class="'card_img' + list.id + ' card_img'"
+            >
+              <img :src="list.image" :alt="list.title" />
+            </router-link>
+            <div class="card_detail">
+              <router-link
+                :to="{ name: 'Works', params: { number: list.id } }"
+                class="filetype"
+                >[{{ list.type }}]</router-link
+              >
+            </div>
+          </div>
+        </grid>
+      </div>
+      <h2 class="no-result" v-show="filterItems.length === 0">
+        <span>No results.</span>
+        <span>\(^Д^)/</span>
+      </h2>
+    </cover>
     <p class="logo">
       <router-link to="/profile" class="logo-link">
         <img src="/icon_beta.png" alt="profile Detail" />
       </router-link>
     </p>
-    <div class="container">
-      <div class="card" v-for="list in filterItems" :key="list.id">
-        <router-link
-          :to="{ name: 'Works', params: { number: list.id } }"
-          :class="'card_img' + list.id + ' card_img'"
-        >
-          <img :src="list.image" :alt="list.title" />
-        </router-link>
-        <div class="card_detail">
-          <router-link
-            :to="{ name: 'Works', params: { number: list.id } }"
-            class="filetype"
-            >[{{ list.type }}]</router-link
-          >
-        </div>
-      </div>
-    </div>
-    <h2 class="no-result" v-show="filterItems.length == 0">
-      <span>No results.</span>
-      <span>\(^Д^)/</span>
-    </h2>
-  </section>
+  </main>
 </template>
 
 <script setup lang="ts">
 import { ref, computed } from "vue";
+import Cover from "@/components/layouts/Cover.vue";
+import Grid from "@/components/layouts/Grid.vue";
 import listData from "@/assets/data/list.json";
 import type { typeListData } from "@/types/listData";
 
@@ -86,34 +92,13 @@ const filterItems = computed(() => lists.filter(list => {
   text-decoration: none;
 }
 .main {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
   background-color: #f0f0f0;
 }
 .container {
   width: 95%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 20px;
-}
-@media screen and (max-width: 768px) {
-  .container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media screen and (max-width: 480px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-}
-.container:empty {
-  padding: 0;
 }
 .card {
   background: #456a8e;
@@ -152,7 +137,6 @@ const filterItems = computed(() => lists.filter(list => {
   text-overflow: ellipsis;
 }
 .textfield {
-  padding: 0;
   background-color: #f0f0f0;
   margin: 0 auto 30px;
   width: 60%;
@@ -181,13 +165,6 @@ const filterItems = computed(() => lists.filter(list => {
   font-size: 10.5vw;
   letter-spacing: 0.075em;
   font-weight: 700;
-  width: 100%;
-  height: calc(100% - 60px);
-  margin: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
 }
 .no-result span {
   display: block;
