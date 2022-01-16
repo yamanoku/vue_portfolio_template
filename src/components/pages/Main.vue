@@ -69,7 +69,7 @@ export default defineComponent({
         searchRegex.test(list.desc)
       );
     }));
-    return { filterKey, filterItems, lists };
+    return { filterKey, filterItems };
   }
 });
 </script>

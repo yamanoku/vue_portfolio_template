@@ -12,7 +12,7 @@
           <span class="detail_type">{{ list.type }}</span>
         </h2>
         <div class="detail_description">
-          <p v-for="text in textCompile(list.desc)" :key="text.index">
+          <p v-for="text in textCompile(list.desc)" :key="text">
             {{ text }}
           </p>
         </div>
