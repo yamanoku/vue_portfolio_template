@@ -70,7 +70,7 @@ const filterItems = computed(() => lists.filter(list => {
 <style scoped>
 .logo {
   position: absolute;
-  top: 2.5%;
+  top: 20px;
   right: 2.5%;
   display: block;
   z-index: 10;
