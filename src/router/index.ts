@@ -1,8 +1,8 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Main from "@/components/Main.vue";
-import Detail from "@/components/Detail.vue";
-import Profile from "@/components/Profile.vue";
-import NotFound from "@/components/404.vue";
+import Main from "@/components/pages/Main.vue";
+import Detail from "@/components/pages/Detail.vue";
+import Profile from "@/components/pages/Profile.vue";
+import NotFound from "@/components/pages/404.vue";
 
 const routes = [
   {
