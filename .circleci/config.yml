@@ -16,6 +16,9 @@ jobs:
 
     working_directory: ~/repo
 
+    environment:
+      NODE_OPTIONS: --openssl-legacy-provider
+
     steps:
       - checkout
       # - restore_cache:
