@@ -25,12 +25,10 @@
 
 <script setup lang="ts">
 import listData from "@/assets/data/list.json";
+import { textCompile } from "@/lib/textCompile";
 import type { typeListData } from "@/types/listData";
 
 const lists: Array<typeListData> = listData;
-const textCompile = (text: string): string[] => {
-  return text.split(/\n/g);
-}
 </script>
 
 <style scoped>
