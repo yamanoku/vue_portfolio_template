@@ -12,9 +12,11 @@
           <span class="detail_type">{{ list.type }}</span>
         </h2>
         <div class="detail_description">
-          <p v-for="text in textCompile(list.desc)" :key="text">
-            {{ text }}
-          </p>
+          <stack>
+            <p v-for="text in textCompile(list.desc)" :key="text">
+              {{ text }}
+            </p>
+          </stack>
         </div>
         <a :href="list.url" target="_blank">{{ list.url }}</a>
       </div>
@@ -25,6 +27,7 @@
 
 <script setup lang="ts">
 import listData from "@/assets/data/list.json";
+import Stack from "@/components/layouts/Stack.vue";
 import { textCompile } from "@/lib/textCompile";
 import type { typeListData } from "@/types/listData";
 
@@ -75,12 +78,9 @@ article {
 .detail_description {
   border-bottom: 1px solid #dadada;
   overflow-y: scroll;
-  display: grid;
-  grid-row-gap: 10px;
 }
 .detail_description p {
   font-size: 1.4rem;
-  margin: 0;
 }
 .detail_description + a {
   border-bottom-left-radius: 3px;
