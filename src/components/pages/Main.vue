@@ -47,20 +47,12 @@
 <script lang="ts">
 import { defineComponent, ref, computed } from "vue";
 import listData from "@/assets/data/list.json";
-
-const data: Array<{
-  id: string;
-  title: string;
-  type: string;
-  url: string;
-  image: string;
-  desc: string;
-}> = listData;
+import type { typeListData } from "@/types/listData";
 
 export default defineComponent({
   setup() {
     const filterKey = ref("");
-    const lists = data;
+    const lists: Array<typeListData> = listData;
     const filterItems = computed(() => lists.filter(list => {
       const searchRegex = new RegExp(filterKey.value, "i");
       return (
@@ -69,7 +61,7 @@ export default defineComponent({
         searchRegex.test(list.desc)
       );
     }));
-    return { filterKey, filterItems };
+    return { filterKey, filterItems, lists };
   }
 });
 </script>
