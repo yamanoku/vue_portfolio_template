@@ -44,26 +44,21 @@
   </section>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, computed } from "vue";
+<script setup lang="ts">
+import { ref, computed } from "vue";
 import listData from "@/assets/data/list.json";
 import type { typeListData } from "@/types/listData";
 
-export default defineComponent({
-  setup() {
-    const filterKey = ref("");
-    const lists: Array<typeListData> = listData;
-    const filterItems = computed(() => lists.filter(list => {
-      const searchRegex = new RegExp(filterKey.value, "i");
-      return (
-        searchRegex.test(list.title) ||
-        searchRegex.test(list.type) ||
-        searchRegex.test(list.desc)
-      );
-    }));
-    return { filterKey, filterItems, lists };
-  }
-});
+const filterKey = ref("");
+const lists: Array<typeListData> = listData;
+const filterItems = computed(() => lists.filter(list => {
+  const searchRegex = new RegExp(filterKey.value, "i");
+  return (
+    searchRegex.test(list.title) ||
+    searchRegex.test(list.type) ||
+    searchRegex.test(list.desc)
+  );
+}));
 </script>
 
 <style scoped>
