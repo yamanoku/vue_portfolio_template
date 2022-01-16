@@ -23,20 +23,14 @@
   </article>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import listData from "@/assets/data/list.json";
 import type { typeListData } from "@/types/listData";
 
-export default defineComponent({
-  setup() {
-    const lists: Array<typeListData> = listData;
-    const textCompile = (text: string): string[] => {
-      return text.split(/\n/g);
-    }
-    return { lists, textCompile };
-  }
-});
+const lists: Array<typeListData> = listData;
+const textCompile = (text: string): string[] => {
+  return text.split(/\n/g);
+}
 </script>
 
 <style scoped>
