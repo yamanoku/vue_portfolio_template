@@ -1,19 +1,23 @@
 <template>
   <article>
-    <div class="detail-404">
-      <h2 class="detail-404-heading">404</h2>
-      <router-link class="detail_btn" to="/">Back Home</router-link>
-    </div>
+    <imposter>
+      <div class="detail-404">
+        <h2 class="detail-404-heading">404</h2>
+        <router-link class="detail_btn" to="/">Back Home</router-link>
+      </div>
+    </imposter>
   </article>
 </template>
 
+<script setup lang="ts">
+import Imposter from "@/components/layouts/Imposter.vue";
+</script>
+
 <style scoped>
 article {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .detail-404 {
   display: flex;
