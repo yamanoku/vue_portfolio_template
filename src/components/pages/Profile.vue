@@ -78,7 +78,7 @@ a:hover {
   height: 100%;
   margin: auto;
   padding: 80px 2.5% 2.5%;
-  background: url(/iam.jpg) center center;
+  background: url(/public/iam.jpg) center center;
   background-size: cover;
   color: #444;
 }
