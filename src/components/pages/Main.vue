@@ -98,7 +98,6 @@ const filterItems = computed(() => lists.filter(list => {
   width: 95%;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 20px;
 }
 .card {
   background: #456a8e;
