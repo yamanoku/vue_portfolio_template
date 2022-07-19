@@ -30,6 +30,9 @@ jobs:
       #       - ~/usr/local/lib/node_modules
       #     key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run:
+          name: Lint
+          command: npm run lint
+      - run:
           name: Typed Check
           command: npm run tscheck
       - run: npm run build
