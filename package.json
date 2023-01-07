@@ -14,8 +14,7 @@
     "core-js": "3.27.1",
     "register-service-worker": "1.7.2",
     "vue": "3.2.45",
-    "vue-router": "4.1.6",
-    "yama-normalize": "1.8.0"
+    "vue-router": "4.1.6"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "5.48.0",
