@@ -25,9 +25,9 @@ jobs:
       - name: npm ci
         run: npm ci
       - name: Lint
-        command: npm run lint
+        run: npm run lint
       - name: Typed Check
-        command: npm run tscheck
+        run: npm run tscheck
       - name: build check
         run: npm run build
         env:
