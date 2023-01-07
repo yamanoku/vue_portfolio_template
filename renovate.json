@@ -2,7 +2,11 @@
   "extends": [
     "config:base"
   ],
+  "dependencyDashboard": false,
   "automerge": true,
+  "major": {
+    "automerge": false
+  },
   "labels": [
     "update-dependencies"
   ],
