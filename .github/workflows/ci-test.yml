@@ -4,6 +4,12 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - 'src/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'babel.config.js'
+      - 'tsconfig.json'
 
 permissions:
   contents: write
