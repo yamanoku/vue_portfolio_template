@@ -32,7 +32,7 @@
     "eslint-plugin-vue": "9.17.0",
     "normalize.css": "8.0.1",
     "typescript": "5.2.2",
-    "vue-tsc": "1.8.10"
+    "vue-tsc": "1.8.11"
   },
   "eslintConfig": {
     "root": true,
