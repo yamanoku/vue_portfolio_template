@@ -14,7 +14,7 @@
     "core-js": "3.37.1",
     "register-service-worker": "1.7.2",
     "vue": "3.4.35",
-    "vue-router": "4.4.1"
+    "vue-router": "4.4.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "7.18.0",
