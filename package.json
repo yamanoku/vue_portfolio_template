@@ -16,36 +16,13 @@
     "vue-router": "4.4.5"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.25.8",
-    "@typescript-eslint/eslint-plugin": "8.8.1",
-    "@typescript-eslint/parser": "8.8.1",
     "@vite-pwa/assets-generator": "0.2.6",
     "@vitejs/plugin-vue": "5.1.4",
-    "@vue/eslint-config-typescript": "13.0.0",
-    "eslint": "8.57.1",
-    "eslint-plugin-vue": "9.29.0",
     "normalize.css": "8.0.1",
     "typescript": "5.6.3",
     "vite": "5.4.8",
     "vite-plugin-pwa": "0.20.5",
     "vue-tsc": "2.1.6"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/vue3-essential",
-      "eslint:recommended",
-      "@vue/typescript"
-    ],
-    "parserOptions": {
-      "parser": "@typescript-eslint/parser"
-    },
-    "rules": {
-      "vue/multi-word-component-names": "off"
-    }
   },
   "browserslist": [
     "> 1%",
