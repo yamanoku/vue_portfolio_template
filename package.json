@@ -7,6 +7,7 @@
   "scripts": {
     "serve": "vite",
     "build": "vite build",
+    "preview": "vite preview",
     "lint": "eslint",
     "tscheck": "vue-tsc --noEmit"
   },
@@ -18,6 +19,7 @@
     "@babel/eslint-parser": "7.25.8",
     "@typescript-eslint/eslint-plugin": "8.8.1",
     "@typescript-eslint/parser": "8.8.1",
+    "@vite-pwa/assets-generator": "0.2.6",
     "@vitejs/plugin-vue": "5.1.4",
     "@vue/eslint-config-typescript": "13.0.0",
     "eslint": "8.57.1",
