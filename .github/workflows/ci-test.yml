@@ -8,8 +8,9 @@ on:
       - 'src/**'
       - 'package.json'
       - 'package-lock.json'
-      - 'babel.config.js'
       - 'tsconfig.json'
+      - 'tsconfig.app.json'
+      - 'tsconfig.node.json'
 
 permissions:
   contents: write
@@ -28,8 +29,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm ci
-        run: npm ci
+      - name: rm package-lock.json
+        run: rm package-lock.json
+      - name: npm install
+        run: npm install
       - name: Lint
         run: npm run lint
       - name: Typed Check
