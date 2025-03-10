@@ -29,10 +29,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - name: rm package-lock.json
-        run: rm package-lock.json
-      - name: npm install
-        run: npm install
+      - name: npm ci
+        run: npm ci
       - name: Lint
         run: npm run lint
       - name: Typed Check
