@@ -16,10 +16,10 @@
     "vue-router": "4.5.1"
   },
   "devDependencies": {
-    "@eslint/js": "9.25.1",
+    "@eslint/js": "9.26.0",
     "@vite-pwa/assets-generator": "1.0.0",
     "@vitejs/plugin-vue": "5.2.3",
-    "eslint": "9.25.1",
+    "eslint": "9.26.0",
     "eslint-plugin-vue": "10.1.0",
     "globals": "16.0.0",
     "normalize.css": "8.0.1",
