@@ -8,7 +8,7 @@
     "serve": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint",
+    "lint": "oxlint && eslint",
     "tscheck": "vue-tsc --noEmit"
   },
   "dependencies": {
@@ -16,13 +16,13 @@
     "vue-router": "4.5.1"
   },
   "devDependencies": {
-    "@eslint/js": "9.28.0",
     "@vite-pwa/assets-generator": "1.0.0",
     "@vitejs/plugin-vue": "5.2.4",
     "eslint": "9.28.0",
     "eslint-plugin-vue": "10.2.0",
     "globals": "16.2.0",
     "normalize.css": "8.0.1",
+    "oxlint": "1.0.0",
     "typescript": "5.8.3",
     "typescript-eslint": "8.34.0",
     "vite": "6.3.5",
