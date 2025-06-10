@@ -95,7 +95,8 @@
         "**/*.ts",
         "**/*.tsx",
         "**/*.mts",
-        "**/*.cts"
+        "**/*.cts",
+        "**/*.vue"
       ],
       "rules": {
         "no-class-assign": "off",
