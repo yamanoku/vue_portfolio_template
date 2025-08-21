@@ -12,7 +12,7 @@
     "tscheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "vue": "3.5.18",
+    "vue": "3.5.19",
     "vue-router": "4.5.1"
   },
   "devDependencies": {
