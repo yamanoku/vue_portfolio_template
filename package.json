@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "vue": "3.5.22",
-    "vue-router": "4.5.1"
+    "vue-router": "4.6.0"
   },
   "devDependencies": {
     "@vite-pwa/assets-generator": "1.0.2",
