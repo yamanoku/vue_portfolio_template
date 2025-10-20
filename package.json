@@ -24,7 +24,7 @@
     "normalize.css": "8.0.1",
     "oxlint": "1.23.0",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.46.1",
+    "typescript-eslint": "8.46.2",
     "vite": "7.1.11",
     "vite-plugin-pwa": "1.1.0",
     "vue-eslint-parser": "10.2.0",
