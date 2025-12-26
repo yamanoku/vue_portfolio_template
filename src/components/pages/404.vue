@@ -9,7 +9,7 @@
   </cover>
 </template>
 
-<script setup lang="ts">
+<script setup vapor>
 import Cover from "@/components/layouts/Cover.vue";
 import Imposter from "@/components/layouts/Imposter.vue";
 </script>

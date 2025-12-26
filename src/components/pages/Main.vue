@@ -48,7 +48,7 @@
   </main>
 </template>
 
-<script setup lang="ts">
+<script setup vapor lang="ts">
 import { ref, computed } from "vue";
 import Cover from "@/components/layouts/Cover.vue";
 import Grid from "@/components/layouts/Grid.vue";

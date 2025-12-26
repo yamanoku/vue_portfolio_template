@@ -1,5 +1,5 @@
-import { createApp } from 'vue'
+import { createApp, vaporInteropPlugin } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(vaporInteropPlugin).use(router).mount('#app')
