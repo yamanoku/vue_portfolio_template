@@ -127,3 +127,5 @@ a:hover {
   transform: rotate(-45deg);
 }
 </style>
+
+<script setup vapor></script>
