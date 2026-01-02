@@ -20,7 +20,7 @@
     "@vitejs/plugin-vue": "6.0.3",
     "eslint": "9.39.2",
     "eslint-plugin-vue": "10.6.2",
-    "globals": "16.5.0",
+    "globals": "17.0.0",
     "normalize.css": "8.0.1",
     "oxlint": "1.36.0",
     "typescript": "5.9.3",
