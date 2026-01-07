@@ -17,3 +17,5 @@
   margin-block-start: var(--space, 1.5rem);
 }
 </style>
+
+<script setup vapor></script>

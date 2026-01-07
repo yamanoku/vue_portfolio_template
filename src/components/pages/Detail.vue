@@ -25,7 +25,7 @@
   </article>
 </template>
 
-<script setup lang="ts">
+<script setup vapor lang="ts">
 import listData from "@/assets/data/list.json";
 import Stack from "@/components/layouts/Stack.vue";
 import { textCompile } from "@/lib/textCompile";

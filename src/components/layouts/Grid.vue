@@ -15,3 +15,5 @@
   }
 }
 </style>
+
+<script setup vapor></script>
