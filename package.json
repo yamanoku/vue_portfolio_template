@@ -22,7 +22,7 @@
     "eslint-plugin-vue": "10.9.2",
     "globals": "17.6.0",
     "normalize.css": "8.0.1",
-    "oxlint": "1.69.0",
+    "oxlint": "1.70.0",
     "typescript": "6.0.3",
     "typescript-eslint": "8.61.1",
     "vite": "8.0.16",
