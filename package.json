@@ -28,7 +28,7 @@
     "vite": "8.2.0",
     "vite-plugin-pwa": "1.3.0",
     "vue-eslint-parser": "10.4.1",
-    "vue-tsc": "3.3.8"
+    "vue-tsc": "3.3.9"
   },
   "browserslist": [
     "> 1%",
