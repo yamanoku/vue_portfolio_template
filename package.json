@@ -26,7 +26,7 @@
     "oxlint": "1.77.0",
     "typescript": "6.0.3",
     "typescript-eslint": "8.66.0",
-    "vite": "8.2.0",
+    "vite": "8.2.1",
     "vite-plugin-pwa": "1.3.0",
     "vue-eslint-parser": "10.4.1",
     "vue-tsc": "3.3.9"
