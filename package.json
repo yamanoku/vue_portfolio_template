@@ -24,7 +24,7 @@
     "globals": "17.13.0",
     "normalize.css": "8.0.1",
     "oxlint": "1.88.0",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "typescript-eslint": "8.71.2",
     "vite": "8.3.4",
     "vite-plugin-pwa": "2.0.0",
