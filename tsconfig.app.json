@@ -2,17 +2,22 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "module": "ESNext",
+    "module": "preserve",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "preserve",
+    "types": ["vite-plus/client", "@vizejs/vite-plugin"],
 
     /* Linting */
     "strict": true,
@@ -20,5 +25,11 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
+  "contentMappers": [
+    {
+      "package": "vize",
+      "extensions": [".vue"]
+    }
+  ],
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

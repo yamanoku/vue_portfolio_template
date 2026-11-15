@@ -1,10 +1,8 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
+import { defineConfig } from "@vizejs/vite-plugin/vite-plus";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
   plugins: [
-    vue(),
     VitePWA({
       registerType: "prompt",
       injectRegister: false,
@@ -34,6 +32,13 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": "/src",
+    },
+  },
+}).withVue({
+  linter: {
+    rules: {
+      // Portfolio detail links come from trusted local JSON data.
+      "vue/no-unsafe-url": "off",
     },
   },
 });

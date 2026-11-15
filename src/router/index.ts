@@ -6,47 +6,47 @@ import NotFound from "@/components/pages/404.vue";
 
 const routes = [
   {
-    path: '/',
-    redirect: '/home'
+    path: "/",
+    redirect: "/home",
   },
   {
     path: "/home",
     name: "Main",
-    component: Main
+    component: Main,
   },
   {
     path: "/work/:number/detail",
     name: "Works",
-    component: Detail
+    component: Detail,
   },
   {
     path: "/profile",
     name: "Profile",
-    component: Profile
+    component: Profile,
   },
   {
-    path: '/:pathMatch(.*)*',
-    name: 'NotFound',
-    component: NotFound
-  }
+    path: "/:pathMatch(.*)*",
+    name: "NotFound",
+    component: NotFound,
+  },
 ];
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior(to, _from, savedPosition) {
     if (savedPosition) {
-      return savedPosition
+      return savedPosition;
     } else {
-      return new Promise(resolve => {
-        if (to.matched.some(m => m.meta.scrollToTop)) {
+      return new Promise((resolve) => {
+        if (to.matched.some((m) => m.meta.scrollToTop)) {
           setTimeout(() => {
-            resolve({ top: 0, left: 0 })
-          }, 750)
+            resolve({ top: 0, left: 0 });
+          }, 750);
         }
-      })
+      });
     }
-  }
+  },
 });
 
 export default router;

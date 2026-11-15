@@ -1,35 +1,35 @@
 {
   "name": "vue-portfolio-templete",
   "version": "7.0.0",
+  "private": true,
   "description": "Vue.js Portfolio Templete",
   "author": "yamanoku <0910yama@gmail.com>",
-  "private": true,
   "scripts": {
-    "serve": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "oxlint && eslint",
-    "tscheck": "vue-tsc --noEmit"
+    "serve": "vp dev",
+    "build": "vp build",
+    "preview": "vp preview",
+    "lint": "vp run vize:lint",
+    "fmt": "vp run vize:fmt",
+    "fmt:check": "vp run vize:fmt:check",
+    "tscheck": "tsc --runExternalCode --noEmit -p tsconfig.app.json",
+    "check": "vp run vize:check"
   },
   "dependencies": {
     "vue": "3.5.45",
     "vue-router": "5.5.1"
   },
   "devDependencies": {
-    "@typescript/native": "npm:typescript@7.0.2",
     "@vite-pwa/assets-generator": "2.0.0",
-    "@vitejs/plugin-vue": "6.0.11",
-    "eslint": "10.15.0",
-    "eslint-plugin-vue": "10.12.1",
-    "globals": "17.14.0",
+    "@vizejs/vite-plugin": "0.762.0",
     "normalize.css": "8.0.1",
-    "oxlint": "1.93.0",
-    "typescript": "6.0.3",
-    "typescript-eslint": "8.72.2",
-    "vite": "8.3.8",
+    "typescript": "7.1.0-beta",
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.6.0",
     "vite-plugin-pwa": "2.0.0",
-    "vue-eslint-parser": "10.4.2",
-    "vue-tsc": "3.3.14"
+    "vite-plus": "1.6.0",
+    "vize": "0.762.0"
+  },
+  "overrides": {
+    "vite": "npm:@voidzero-dev/vite-plus-core@1.6.0"
   },
   "browserslist": [
     "> 1%",

@@ -1,53 +1,3 @@
-<template>
-  <main class="main">
-    <cover>
-      <div class="textfield">
-        <label class="textfield_label" for="search">
-          <p class="hidden-text" id="search_text">
-            Input form to search for project
-          </p>
-          <input
-            id="search"
-            aria-describedby="search_text"
-            class="textfield_input"
-            type="text"
-            placeholder="Search Words..."
-            v-model="filterKey"
-          />
-        </label>
-      </div>
-      <div class="container" v-show="filterItems.length !== 0">
-        <grid>
-          <div class="card" v-for="list in filterItems" :key="list.id">
-            <router-link
-              :to="{ name: 'Works', params: { number: list.id } }"
-              :class="'card_img' + list.id + ' card_img'"
-            >
-              <img :src="list.image" :alt="list.title" />
-            </router-link>
-            <div class="card_detail">
-              <router-link
-                :to="{ name: 'Works', params: { number: list.id } }"
-                class="filetype"
-                >[{{ list.type }}]</router-link
-              >
-            </div>
-          </div>
-        </grid>
-      </div>
-      <h2 class="no-result" v-show="filterItems.length === 0">
-        <span>No results.</span>
-        <span>\(^Д^)/</span>
-      </h2>
-    </cover>
-    <p class="logo">
-      <router-link to="/profile" class="logo-link">
-        <img src="/icon_beta.png" alt="profile Detail" />
-      </router-link>
-    </p>
-  </main>
-</template>
-
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import Cover from "@/components/layouts/Cover.vue";
@@ -57,15 +7,62 @@ import type { typeListData } from "@/types/listData";
 
 const filterKey = ref("");
 const lists: Array<typeListData> = listData;
-const filterItems = computed(() => lists.filter(list => {
-  const searchRegex = new RegExp(filterKey.value, "i");
-  return (
-    searchRegex.test(list.title) ||
-    searchRegex.test(list.type) ||
-    searchRegex.test(list.desc)
-  );
-}));
+const filterItems = computed(() =>
+  lists.filter((list) => {
+    const searchRegex = new RegExp(filterKey.value, "i");
+    return (
+      searchRegex.test(list.title) || searchRegex.test(list.type) || searchRegex.test(list.desc)
+    );
+  }),
+);
 </script>
+
+<template>
+  <main class="main">
+    <cover>
+      <div class="textfield">
+        <label class="textfield_label" for="search">
+          <span id="search_text" class="hidden-text">
+            Input form to search for project
+          </span>
+          <input
+            id="search"
+            v-model="filterKey"
+            aria-describedby="search_text"
+            class="textfield_input"
+            placeholder="Search Words..."
+            type="text"
+          />
+        </label>
+      </div>
+      <div v-show="filterItems.length !== 0" class="container">
+        <grid>
+          <div v-for="list in filterItems" :key="list.id" class="card">
+            <router-link
+              :to="{ name: 'Works', params: { number: list.id } }"
+              :class="[`card_img${list.id}`, 'card_img']"
+            >
+              <img :src="list.image" :alt="list.title" />
+            </router-link>
+            <div class="card_detail">
+              <router-link :to="{ name: 'Works', params: { number: list.id } }" class="filetype"
+              >[{{ list.type }}]</router-link>
+            </div>
+          </div>
+        </grid>
+      </div>
+      <h2 v-show="filterItems.length === 0" class="no-result">
+        <span>No results.</span>
+        <span>\(^Д^)/</span>
+      </h2>
+    </cover>
+    <p class="logo">
+      <router-link class="logo-link" to="/profile">
+        <img alt="profile Detail" src="/icon_beta.png" />
+      </router-link>
+    </p>
+  </main>
+</template>
 
 <style scoped>
 .logo {

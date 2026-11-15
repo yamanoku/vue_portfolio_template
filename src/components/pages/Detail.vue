@@ -1,11 +1,20 @@
+<script setup lang="ts">
+import listData from "@/assets/data/list.json";
+import Stack from "@/components/layouts/Stack.vue";
+import { textCompile } from "@/lib/textCompile";
+import type { typeListData } from "@/types/listData";
+
+const lists: Array<typeListData> = listData;
+</script>
+
 <template>
   <article>
     <template v-for="list in lists">
       <div
-        class="detail"
         v-if="$route.path === '/work/' + list.id + '/detail'"
-        :style="{ backgroundImage: 'url(' + list.image + ')' }"
         :key="list.id"
+        class="detail"
+        :style="{ backgroundImage: 'url(' + list.image + ')' }"
       >
         <h2 class="detail_heading">
           No.{{ list.id }} - {{ list.title }}
@@ -18,21 +27,12 @@
             </p>
           </stack>
         </div>
-        <a :href="list.url" target="_blank">{{ list.url }}</a>
+        <a :href="list.url" rel="noopener noreferrer" target="_blank">{{ list.url }}</a>
       </div>
     </template>
     <router-link class="detail_btn" to="/">Back Home</router-link>
   </article>
 </template>
-
-<script setup lang="ts">
-import listData from "@/assets/data/list.json";
-import Stack from "@/components/layouts/Stack.vue";
-import { textCompile } from "@/lib/textCompile";
-import type { typeListData } from "@/types/listData";
-
-const lists: Array<typeListData> = listData;
-</script>
 
 <style scoped>
 article {
@@ -108,14 +108,16 @@ article {
   color: #fff;
   text-align: center;
   border-radius: 50%;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.45),
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.45),
     inset 0 1px 0 rgba(200, 200, 200, 0.45);
   transition: all 0.65s ease-in-out;
   letter-spacing: 0.075em;
 }
 .detail_btn:hover {
   background: #384f66;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.75),
+  box-shadow:
+    0 1px 1px rgba(0, 0, 0, 0.75),
     inset 0 1px 0 rgba(200, 200, 200, 0.45);
 }
 .detail_btn::before {

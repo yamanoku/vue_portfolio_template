@@ -4,16 +4,22 @@
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm ci
 
-# serve with hot reload at localhost:8080
+# serve with hot reload
 npm run serve
 
 # build for production with minification
 npm run build
+
+# lint / format / type-check (Vize + Vite+)
+npm run lint
+npm run fmt
+npm run tscheck
 ```
+
 ## Licence
 
 MIT LICENSE
