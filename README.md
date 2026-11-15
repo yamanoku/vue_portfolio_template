@@ -20,6 +20,8 @@ npm run fmt
 npm run tscheck
 ```
 
+Vue SFC compilation uses Vize locally and on GitHub CI. On Vercel builds it falls back to `@vitejs/plugin-vue` because Vize's current linux-gnu native binary requires GLIBC 2.35 while Vercel's Amazon Linux 2023 image has 2.34.
+
 ## Licence
 
 MIT LICENSE
