@@ -5,4 +5,4 @@ export type typeListData = {
   url: string;
   image: string;
   desc: string;
-}
+};

@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import Cover from "@/components/layouts/Cover.vue";
+import Imposter from "@/components/layouts/Imposter.vue";
+</script>
+
 <template>
   <cover>
     <imposter>
@@ -8,11 +13,6 @@
     </imposter>
   </cover>
 </template>
-
-<script setup lang="ts">
-import Cover from "@/components/layouts/Cover.vue";
-import Imposter from "@/components/layouts/Imposter.vue";
-</script>
 
 <style scoped>
 .detail-404 {
@@ -42,7 +42,9 @@ import Imposter from "@/components/layouts/Imposter.vue";
   line-height: 32px;
   height: 32px;
   border-radius: 2px;
-  box-shadow: 0 1px 1px rgba(0,0,0,.45), inset 0 1px 0 rgba(200,200,200,.45);
+  box-shadow:
+    0 1px 1px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(200,200,200,.45);
   transition: background .65s ease-in-out;
   letter-spacing: .075em;
 }

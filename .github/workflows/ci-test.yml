@@ -5,12 +5,13 @@ on:
     branches:
       - main
     paths:
-      - 'src/**'
-      - 'package.json'
-      - 'package-lock.json'
-      - 'tsconfig.json'
-      - 'tsconfig.app.json'
-      - 'tsconfig.node.json'
+      - "src/**"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig.json"
+      - "tsconfig.app.json"
+      - "tsconfig.node.json"
+      - "vite.config.ts"
 
 permissions:
   contents: write
@@ -33,6 +34,8 @@ jobs:
         run: npm ci
       - name: Lint
         run: npm run lint
+      - name: Format check
+        run: npm run fmt:check
       - name: Typed Check
         run: npm run tscheck
       - name: build check

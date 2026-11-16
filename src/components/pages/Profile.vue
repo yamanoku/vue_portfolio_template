@@ -12,15 +12,18 @@
         </ul>
         <ol>
           <li>1989 : 秋田県能代市にて生まれる | Born in Noshiro, Akita</li>
-          <li>2008 : 岩手大学芸術文化課程 入学 | Get into Iwate University of Art and Culture Course</li>
+          <li
+          >2008 : 岩手大学芸術文化課程 入学 | Get into Iwate University of Art and Culture Course</li>
           <li>2014 : 結婚 | Get married</li>
           <li>2016 : 娘が生まれる | Born daughter</li>
           <li>2019 : 一軒家を建てる | Build a house</li>
         </ol>
         <div class="sns">
-          <a href="https://twitter.com/okuto_oyama" target="_blank" rel="noopener">Twitter</a>
-          <a href="https://www.facebook.com/okutooyama" target="_blank" rel="noopener">Facebook</a>
-          <a href="https://github.com/yamanoku" target="_blank" rel="noopener">Github</a>
+          <a href="https://twitter.com/okuto_oyama" rel="noopener noreferrer" target="_blank"
+          >Twitter</a>
+          <a href="https://www.facebook.com/okutooyama" rel="noopener noreferrer" target="_blank"
+          >Facebook</a>
+          <a href="https://github.com/yamanoku" rel="noopener noreferrer" target="_blank">Github</a>
         </div>
       </section>
       <router-link class="detail_btn" to="/">Back Home</router-link>
@@ -51,13 +54,16 @@ h2 {
   font-weight: 400;
   margin: 0;
 }
-p, ul, ol {
+p,
+ul,
+ol {
   margin: .75em 0 0;
   padding: 0;
   font-size: 1.4rem;
   line-height: 1.8;
 }
-ul, ol {
+ul,
+ol {
   list-style-type: none;
 }
 .sns {
@@ -96,13 +102,17 @@ a:hover {
   color: #fff;
   text-align: center;
   border-radius: 50%;
-  box-shadow: 0 1px 1px rgba(0,0,0,.45), inset 0 1px 0 rgba(200,200,200,.45);
+  box-shadow:
+    0 1px 1px rgba(0,0,0,.45),
+    inset 0 1px 0 rgba(200,200,200,.45);
   transition: all .65s ease-in-out;
   letter-spacing: .075em;
 }
 .detail_btn:hover {
   background: #384f66;
-  box-shadow: 0 1px 1px rgba(0,0,0,.75), inset 0 1px 0 rgba(200,200,200,.45);
+  box-shadow:
+    0 1px 1px rgba(0,0,0,.75),
+    inset 0 1px 0 rgba(200,200,200,.45);
 }
 .detail_btn::before {
   content: '';

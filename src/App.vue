@@ -1,3 +1,10 @@
+<script>
+import "normalize.css";
+export default {
+  name: "App",
+};
+</script>
+
 <template>
   <router-view v-slot="{ Component }">
     <transition name="fade">
@@ -5,13 +12,6 @@
     </transition>
   </router-view>
 </template>
-
-<script>
-import 'normalize.css'
-export default {
-  name: 'App'
-}
-</script>
 
 <style>
 html {
@@ -28,7 +28,9 @@ body {
   padding: 0;
   -webkit-text-size-adjust: 100%;
 }
-*,*:before,*:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 .fade-enter-active {
@@ -38,18 +40,22 @@ body {
   transition: transform .875s cubic-bezier(1.0, 0.5, 0.8, 1.0);
 }
 @media screen and (min-width: 769px) {
-  .fade-enter-from, .fade-leave-to {
+  .fade-enter-from,
+  .fade-leave-to {
     transform: translateY(100vh);
   }
-  .fade-enter-from.main, .fade-leave-to.main {
+  .fade-enter-from.main,
+  .fade-leave-to.main {
     transform: translateY(-100vh);
   }
 }
 @media screen and (max-width: 768px) {
-  .fade-enter-from, .fade-leave-to {
+  .fade-enter-from,
+  .fade-leave-to {
     transform: translateX(-200vw);
   }
-  .fade-enter-from.main, .fade-leave-to.main {
+  .fade-enter-from.main,
+  .fade-leave-to.main {
     transform: translateX(250vw);
   }
 }

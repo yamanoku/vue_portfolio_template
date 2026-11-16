@@ -1,16 +1,11 @@
 {
-  "extends": [
-    "config:base",
-    "helpers:pinGitHubActionDigests"
-  ],
+  "extends": ["config:base", "helpers:pinGitHubActionDigests"],
   "dependencyDashboard": false,
   "automerge": true,
   "major": {
     "automerge": false
   },
-  "labels": [
-    "update-dependencies"
-  ],
+  "labels": ["update-dependencies"],
   "lockFileMaintenance": {
     "enabled": true
   }
