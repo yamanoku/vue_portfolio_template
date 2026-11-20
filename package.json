@@ -26,7 +26,7 @@
     "typescript": "7.1.0-dev.20261119.1",
     "vite": "npm:@voidzero-dev/vite-plus-core@8.3.8000",
     "vite-plugin-pwa": "2.0.0",
-    "vite-plus": "1.6.0",
+    "vite-plus": "1.7.0",
     "vize": "0.762.0"
   },
   "overrides": {
