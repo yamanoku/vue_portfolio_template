@@ -23,7 +23,7 @@
     "@vitejs/plugin-vue": "6.0.11",
     "@vizejs/vite-plugin": "0.793.0",
     "normalize.css": "8.0.1",
-    "typescript": "7.1.0-dev.20261126.1",
+    "typescript": "7.1.0-dev.20261127.1",
     "vite": "npm:@voidzero-dev/vite-plus-core@8.3.8001",
     "vite-plugin-pwa": "2.0.0",
     "vite-plus": "1.8.0",
