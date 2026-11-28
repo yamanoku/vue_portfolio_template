@@ -21,7 +21,7 @@
   "devDependencies": {
     "@vite-pwa/assets-generator": "2.0.0",
     "@vitejs/plugin-vue": "6.0.11",
-    "@vizejs/vite-plugin": "0.812.0",
+    "@vizejs/vite-plugin": "0.813.0",
     "normalize.css": "8.0.1",
     "typescript": "7.1.0-dev.20261128.1",
     "vite": "npm:@voidzero-dev/vite-plus-core@8.3.8001",
